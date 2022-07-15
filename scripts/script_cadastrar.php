@@ -42,10 +42,8 @@ if(count($_POST) > 0) {
         VALUES ('$nome', '$email', '$telefone', '$nascimento', NOW())";
         $deu_certo = $mysqli->query($sql_code) or die($mysqli->error);
         if($deu_certo) {
-            echo '
-            <div class="container pt-5">
-            <h4>Cliente cadastrado com sucesso!!!</h4>
-            </div>';
+            echo "<script>alert('Cliente Cadastrado com Sucesso!');</script>"; 
+            /* '<h4>Cliente cadastrado com sucesso!!!</h4></div>'; */
             unset($_POST);
         }
     }

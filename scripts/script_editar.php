@@ -46,10 +46,8 @@ if(count($_POST) > 0) {
         WHERE id = '$id'";
         $deu_certo = $mysqli->query($sql_code) or die($mysqli->error);
         if($deu_certo) {
-            echo '
-            <div class="container pt-5">
-            <h4>Cliente atualizado com sucesso!!!</h4>
-            </div>';
+            echo "<script>alert('Cadastrado Atualizado com Sucesso!');</script>";
+            /* '<h4>Cliente atualizado com sucesso!!!</h4>'; */
             unset($_POST);
         }
     }
